@@ -1,0 +1,117 @@
+body {
+    color: #5bcefa;
+    background-color: #fff;
+    font-family: arial;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer {
+    color: #f5a9b8;
+    border-top: 1px solid #fff;
+    margin-top: 16px;
+    padding: 16px 0;
+}
+
+header {
+    margin: 16px 0;
+}
+
+h1 {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+header a {
+    color: #f5a9b8;
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+.avatar {
+    width: 250px;
+    height: 250px;
+}
+
+.mainContent {
+    flex-grow: 1;
+    padding-top: 15px;
+}
+
+.aboutContent {
+    position: relative;
+    min-height: 250px;
+}
+
+
+.aboutText {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 0;
+    font-size: 22px;
+}
+
+input {
+    border: 1px solid #f5a9b8;
+    padding: 8px;
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid #f5a9b8;
+    background: #f5a9b8;
+    color: #fff;
+    padding: 8px;
+}
+
+button .jsonButton {
+    margin: auto; 
+}
+
+.inputButton {
+    cursor: pointer;
+    border: 1px solid #f5a9b8;
+    background: #f5a9b8;
+    color: #fff;
+    padding: 8px;
+}
+
+@media screen and (max-width: 768px) {
+
+    header {
+        text-align: center;
+    }
+
+    .mainContent {
+        text-align: center;
+    }
+
+    .aboutText {
+        position: relative;
+    }
+
+    .emailTextArea {
+        display: none;
+    }
+
+    .emailTextAreaMobile {
+        display: inline-block !important;
+    }
+
+    .emailForm {
+        text-align: center;
+    }
+
+    .helpText {
+        text-align: center;
+    }
+
+    .weatherFormButton {
+        margin-top: 15px;
+    }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Aide</title>
+        <link rel="icon" href="/assets/weatherIcon.png">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/styles.css">        
+    </head>
+
+    <body>
+        <div class="mainContent">
+            {{>header}}
+            <h3 class="helpText" >{{helpMessage}}</h3>
+            <form class="emailForm" action="mailto:shawn.casaus@gmail.com" method="post" enctype="text/plain">
+            Name:<br>
+            <input type="text" name="name"><br>
+            E-mail:<br>
+            <input type="text" name="mail"><br>
+            Comment:<br>
+            <textarea class="emailTextAreaMobile" style="display: none;" type="text" name="comment" cols="30" rows="5"></textarea>
+            <textarea class="emailTextArea" type="text" name="comment" cols="50" rows="5"></textarea><br><br>
+            <input class="inputButton" type="submit" value="Send">
+            <input class="inputButton" type="reset" value="Reset">
+            </form>
+        </div>
+
+        {{>footer}}
+    </body>
+</html>
