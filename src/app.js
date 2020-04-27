@@ -19,6 +19,7 @@ app.use(express.static(publicDirectoryPath));
 app.set('view engine', 'hbs');
 app.set('views', viewsPath);
 
+//index page
 app.get('', (req, res) => {
     res.render('index', {
         title: 'Application Météo',
@@ -70,11 +71,12 @@ app.get('/weather', (req, res) => {
     }
 }); 
 
+//get JSON from last request and send it too a get-json url
 app.get('/weather/get-json', (req, res) => {
     return res.send(getJSON()); //get last call and send it to URL /weather/get-json
 });
 
-
+//renders the about page 
 app.get('/about', (req, res) => {
     res.render('about', {
         title: ' À Propos de Moi',
@@ -82,6 +84,7 @@ app.get('/about', (req, res) => {
     });
 });
 
+//renders the help page
 app.get('/help', (req, res) => {
     res.render('help', {
         title: "Page d'Aide",
@@ -90,6 +93,7 @@ app.get('/help', (req, res) => {
     });
 });
 
+//renders any incorrect help url, for futrue support of more help features
 app.get('/help/*', (req, res) => {
     res.render('404', {
         title: 'Erreur: 404',
@@ -98,6 +102,7 @@ app.get('/help/*', (req, res) => {
     });
 });
 
+//handler for 404's
 app.get('*', (req, res) => {
     res.render('404', {
         title: 'Erreur: 404',
@@ -106,6 +111,7 @@ app.get('*', (req, res) => {
     });
 });
 
+//initial listener
 app.listen(3000, () => {
     console.log("Server running on port 3000.");
 });

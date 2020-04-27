@@ -3,14 +3,16 @@ const search = document.querySelector('input');
 const messageOne = document.querySelector('#messageUn');
 const messageTwo = document.querySelector('#messageDeux');
 
+//add an event listener on the submit button
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const location = search.value;
 
-    messageOne.textContent = 'Chargement...';
+    messageOne.textContent = 'Chargement...'; //loading
     messageTwo.textContent = '';
 
+    //fetch the API to render it on the home page
     fetch('http://localhost:3000/weather?address=' + location).then((response) => {
         response.json().then((data) => {
             if (data.error) {
