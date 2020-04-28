@@ -23,7 +23,7 @@ weatherForm.addEventListener('submit', (e) => {
                 messageOne.textContent = '';
                 // messageTwo.textContent = "La Météo en " + data.location + " est de " + data.forcast.summary + ".";
                 messageTwo.innerHTML = "<p>La Météo en " + data.location + " est de " + data.forcast.summary + " et la température est de " + data.forcast.temperature + " C°.</p>"
-                + "<a href=\"/weather/get-json\" target=\"_blank\" ><button class=\"jsonButton\">Voir l'Objet</button></a>"
+                + "<a href=\"/weather/get-json\" target=\"_blank\" ><button class=\"jsonButton\">Voir l'Objet</button></a>";
             }
         });
     });
